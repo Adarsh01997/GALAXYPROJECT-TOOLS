@@ -1,0 +1,25 @@
+<tool id="box" name="BoxPlot" version="1.0.2">
+<description>Boxplot Graphs</description>
+<command interpreter="python3">boxplot.py $input $replace $s $g $out_file </command>
+<inputs>
+<param name="input" type="data" format="csv" label="Dataset"/>
+<param name="replace" type="text" value="" label="Type Remove column name"/>
+<param name="s" type="text" value="" label="Label for x axis"/>
+<param name="g" type="text" value="" label="Label for y axis"/>
+</inputs>
+<outputs>
+<data format="pdf" name="out_file"/>
+</outputs>
+<tests>
+<test>
+<param name="input1" vablue="sample.csv"/>
+<output name="out_file1" file="result.pdf"/>
+</test>
+</tests>
+<help>
+This supports a tabular data the please insert a valid csv file like 
+example:
+
+
+</help>
+</tool>

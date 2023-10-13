@@ -1,0 +1,22 @@
+<tool id="sca" name="scatter" version="1.0.2">
+<description>plot</description>
+<command interpreter="python3">point.py $input $label $xaxis $yaxis $out_file </command>
+<inputs>
+<param name="input" type="data" format="csv" label="Dataset"/>
+<param name="label" type="text" value="" label="Plot Title"/>
+<param name="xaxis" type="text" value="" label="Label for x axis"/>
+<param name="yaxis" type="text" value="" label="Label for y axis"/>
+</inputs>
+<outputs>
+<data format="pdf" name="out_file"/>
+</outputs>
+<tests>
+<test>
+<param name="input1" value="1.bed"/>
+<param name="col1" value="4"/>
+<param name="col2" value="1"/>
+<param name="datacol" value="6"/>
+<output name="out_file1" file="mergeCols.dat"/>
+</test>
+</tests>
+</tool>

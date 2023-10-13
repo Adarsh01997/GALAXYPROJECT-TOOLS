@@ -1,0 +1,27 @@
+<tool id="rid" name="rideline" version="1.0.2">
+<description>ridgeline Chart</description>
+<command interpreter="python3">ridgeline.py $input $column1 $label $column2 $label1 $out_file </command>
+<inputs>
+<param name="input" type="data" format="csv" label="Dataset"/>
+<param name="column1" type="text" value="" label="Name column name"/>
+<param name="label" type="text" value="" label="plot by column name"/>
+<param name="column2" type="text" value="" label="Plot values column name"/>
+<param name="label1" type="text" value="" label="xAxis label"/>
+
+</inputs>
+<outputs>
+<data format="pdf" name="out_file"/>
+</outputs>
+<tests>
+<test>
+<param name="input1" vablue="sample.csv"/>
+<output name="out_file1" file="result.pdf"/>
+</test>
+</tests>
+<help>
+This supports a tabular data the please insert a valid csv file like 
+example:
+
+
+</help>
+</tool>

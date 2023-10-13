@@ -1,0 +1,26 @@
+<tool id="Barplot" name="graph tool" version="1.0.2">
+<description>Covid</description>
+<command interpreter="python3">covid.py $date  $out_file  </command>
+<inputs>
+
+
+<param name="date" type="text" value="" label="Date Format mm-dd-yyyy"/>
+
+</inputs>
+
+<outputs>
+<data format="pdf" name="out_file" />
+
+
+</outputs>
+<tests>
+<test>
+<param name="input1" value="1.bed"/>
+
+</test>
+</tests>
+<help>
+Only Write date and get the covid detail of world in barplot but use a specific date format as a mention in above. 
+</help>
+</tool>
+

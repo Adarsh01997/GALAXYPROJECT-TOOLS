@@ -1,0 +1,30 @@
+<tool id="circular" name="chart" version="1.0.2">
+<description>Circular lollipop plot</description>
+<command interpreter="python3">redarchart.py $input $column1 $column2 $column3 $column4 $label $label1 $out_file </command>
+<inputs>
+<param name="input" type="data" format="csv" label="Dataset"/>
+<param name="column1" type="text" value="" label="Type column name"/>
+<param name="column2" type="text" value="" label="Type column name"/>
+<param name="column3" type="text" value="" label="Type column name"/>
+<param name="column4" type="text" value="" label="Type column name"/>
+<param name="label" type="text" value="" label="Type  label of column name"/>
+<param name="label1" type="text" value="" label="Type label of column name"/>
+
+</inputs>
+<outputs>
+<data format="pdf" name="out_file"/>
+</outputs>
+<tests>
+<test>
+<param name="input1" vablue="sample.csv"/>
+<output name="out_file1" file="result.pdf"/>
+</test>
+</tests>
+<help>
+This supports a tabular data the please insert a valid csv file like 
+example:
+column fields = password value time_unit category password rank 
+
+
+</help>
+</tool>

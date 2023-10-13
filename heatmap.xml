@@ -1,0 +1,28 @@
+<tool id="heatmap" name="chart" version="1.0.2">
+<description>Heatmap Chart</description>
+<command interpreter="python3">heatmap.py $input $column1 $column2 $column3 $column4 $column5 $out_file </command>
+<inputs>
+<param name="input" type="data" format="csv" label="Dataset"/>
+<param name="column1" type="text" value="" label="Type numeric column1 name"/>
+<param name="column2" type="text" value="" label="Type numeric column2 name"/>
+<param name="column3" type="text" value="" label="Type numeric column3 name"/>
+<param name="column4" type="text" value="" label="Type numeric column4 name"/>
+<param name="column5" type="text" value="" label="Type numeric column5 name"/>
+
+</inputs>
+<outputs>
+<data format="pdf" name="out_file"/>
+</outputs>
+<tests>
+<test>
+<param name="input1" vablue="sample.csv"/>
+<output name="out_file1" file="result.pdf"/>
+</test>
+</tests>
+<help>
+This supports a tabular data the please insert a valid csv file like 
+example:
+
+
+</help>
+</tool>

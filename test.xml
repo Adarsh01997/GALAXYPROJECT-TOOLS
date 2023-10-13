@@ -1,0 +1,37 @@
+<tool id="multi" name="Plot" version="1.0.2">
+<description>Multi Graphs</description>
+<command interpreter="python3">test.py $input $select $color $label $xaxis $yaxis $out_file </command>
+<inputs>
+<param name="input" type="data" format="csv" label="Dataset"/>
+<param name="select" type="select" label=" Select Bargraph ,Scatter_Chart And Line Chart">
+<option value="Bar">BAR GRAPH</option>
+<option value="scatter">SCATTER CHART</option>
+<option value="line">LINE CHART</option>
+
+</param>
+<param name="color" type="select" label=" Select Color for Graph">
+<option value="r">RED</option>
+<option value="g">GREEN</option>
+<option value="b">BLUE</option>
+
+</param>
+<param name="label" type="text" value="" label="Plot Title"/>
+<param name="xaxis" type="text" value="" label="Label for x axis"/>
+<param name="yaxis" type="text" value="" label="Label for y axis"/>
+</inputs>
+<outputs>
+<data format="pdf" name="out_file"/>
+</outputs>
+<tests>
+<test>
+<param name="input1" value="1.csv"/>
+<output name="out_file1" file="1.pdf"/>
+</test>
+</tests>
+<help>
+This supports a tabular data the please insert a valid csv file like 
+example:
+
+
+</help>
+</tool>
